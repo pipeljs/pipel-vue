@@ -1,0 +1,74 @@
+---
+sidebarDepth: 2
+---
+
+# useFetch
+
+基于[vueuse/useFetch](https://vueuse.org/core/useFetch/)，并支持了缓存、自动更新、条件请求、流等新功能
+
+## 使用方式
+
+```javascript
+import { useFetch } from "pipel-vue";
+
+const { data, loading, error, promise$ } = useFetch("https://example.com");
+```
+
+## 使用场景
+
+useFetch 用来处理异步数据之间的关系，一般有如下三种使用场景：
+
+### 声明式+响应式关系
+
+比如下面示例 data2 和 data1：
+
+```javascript{7}
+import { useFetch } from "pipel-vue";
+
+const useFetchApi = (payload: Ref<Record<string, any>>) =>
+  useFetch("https://example.com", { refetch: true }).post(payload).json();
+const data1 = ref({ a: 1 });
+// 使用
+const { data: data2 } = useFetchApi(data1);
+```
+
+- data2 和 data1 通过 useFetchApi 函数形成了一种声明式的关系，无需关心生产 data2 的细节
+- data2 和 data1 通过 useFetchApi 函数形成了一种响应式的关系，data2 会随着 data1 的变化而变化
+
+### 声明式关系
+
+比如下面示例 data2 和 data1：
+
+```javascript{7}
+import { useFetch } from "pipel-vue";
+
+const useFetchApi = (payload: Ref<Record<string, any>>) =>
+  useFetch("https://example.com").post(payload).json();
+
+const data1 = ref({ a: 1 });
+const { data: data2, execute: fetchData2 } = useFetchApi(data1);
+```
+
+- data2 和 data1 通过 useFetchApi 函数形成了一种声明式的关系
+- 通过调用 fetchData2 函数来主动更新 data2，此时会拿最新的 data1 作为请求参数
+
+### 调用关系
+
+比如下面示例 data2 和 data1：
+
+```javascript{7}
+import { useFetch } from "pipel-vue";
+
+const useFetchApi = (payload: Record<string, any>) =>
+  useFetch("https://example.com").post(payload).json();
+
+const data1 = ref({ a: 1 });
+const { data: data2 } = await useFetchApi(data1.value);
+```
+
+- data2 是通过调用 useFetchApi 异步函数并实时取出当前 data1 的值作为请求参数来获取的
+
+### 流
+
+useFetch 除了提供响应式数据输入，响应式的数据输出，还提供了 pipel 流的支持。
+流既可以作为 useFetch 的输入，也可以作为 useFetch 的输出，这样异步请求就可以作为流式编程中的一个节点处理，详见[promise$](/cn/useFetch/stream)。

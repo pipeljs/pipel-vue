@@ -1,0 +1,61 @@
+export default {
+  label: "简体中文",
+  lang: "cn",
+  title: "pipel-vue",
+  description: "Pipel-based Streaming Programming Library for Vue",
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      { text: "指南", link: "/cn/guide/introduce" },
+      { text: "API", link: "/cn/usePipel/index" },
+      { text: "试试", link: "/cn/guide/try" },
+      {
+        text: "changelog",
+        link: "https://github.com/pipeljs/pipel-vue/blob/master/CHANGELOG.md",
+      },
+      { text: "pipel", link: "https://pipeljs.github.io/pipel-doc/" },
+    ],
+    sidebar: {
+      "/cn/": [
+        {
+          text: "指南",
+          items: [
+            { text: "简介", link: "/cn/guide/introduce" },
+            { text: "动机", link: "/cn/guide/motion" },
+            { text: "上手", link: "/cn/guide/quick" },
+            { text: "调试", link: "/cn/guide/debug" },
+            { text: "响应式", link: "/cn/guide/reactive" },
+            { text: "流式渲染", link: "/cn/guide/render" },
+            { text: "不可变数据", link: "/cn/guide/immutable" },
+            { text: "业务模型抽象", link: "/cn/guide/pinia" },
+          ],
+        },
+        {
+          text: "API",
+          items: [
+            {
+              text: "pipel",
+              link: "/cn/usePipel/index.html",
+            },
+            {
+              text: "useFetch",
+              collapsed: true,
+              items: [
+                { text: "API", link: "/cn/useFetch/api.html" },
+                { text: "介绍", link: "/cn/useFetch/introduce.html" },
+                { text: "用法", link: "/cn/useFetch/use.html" },
+                { text: "缓存", link: "/cn/useFetch/cache.html" },
+                { text: "更新", link: "/cn/useFetch/refresh.html" },
+                { text: "条件", link: "/cn/useFetch/condition.html" },
+                { text: "重试", link: "/cn/useFetch/retry.html" },
+                { text: "防抖", link: "/cn/useFetch/debounce.html" },
+                { text: "节流", link: "/cn/useFetch/throttle.html" },
+                { text: "推流", link: "/cn/useFetch/stream.html" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+};

@@ -1,0 +1,78 @@
+{
+  "name": "pipel-vue",
+  "version": "0.2.33",
+  "description": "Pipel-based Streaming Programming Library for Vue",
+  "author": "GolderBrother <https://github.com/GolderBrother>",
+  "repository": "https://github.com/pipeljs/pipel-vue",
+  "homepage": "https://pipeljs.github.io/pipel-vue/index.html",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/mjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "sideEffects": false,
+  "keywords": [
+    "promise",
+    "pipel",
+    "vue",
+    "stream",
+    "pipel-vue"
+  ],
+  "scripts": {
+    "test": "vitest --run",
+    "check": "tsc --noEmit",
+    "coverage": "vitest run --coverage",
+    "docs:dev": "vitepress dev packages",
+    "docs:build": "vitepress build packages",
+    "docs:preview": "vitepress preview packages",
+    "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.mjs.json",
+    "prepare": "husky",
+    "lint": "eslint --cache --fix",
+    "release": "standard-version",
+    "release-major": "standard-version --release-as major",
+    "release-minor": "standard-version --release-as minor",
+    "release-patch": "standard-version --release-as patch"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@vueuse/shared": "^11.1.0",
+    "pipel": "^0.3.34",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/js": "^10.0.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/lodash-es": "^4.17.12",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
+    "@vitest/coverage-v8": "2.0.5",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^9.13.0",
+    "headers-polyfill": "3.2.5",
+    "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "msw": "^2.10.5",
+    "node-fetch": "^3.3.2",
+    "prettier": "^3.3.3",
+    "sass": "^1.81.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
+    "vitepress": "1.3.4",
+    "vitest": "2.0.5",
+    "vue": "^3.5.15"
+  }
+}
