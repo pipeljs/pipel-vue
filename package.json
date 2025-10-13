@@ -20,7 +20,7 @@
   "sideEffects": false,
   "keywords": [
     "promise",
-    "pipel",
+    "pipeljs",
     "vue",
     "stream",
     "pipel-vue"
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@vueuse/shared": "^11.1.0",
-    "pipel": "^0.3.34",
+    "pipeljs": "^0.3.34",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ pipel 底层采用 [limu](https://tnfe.github.io/limu/) 不可变数据，并且
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 // 无需使用扩展符{...value, obj: {...value.obj, age: value.obj.age + 1}j}
 stream$.set((value) => (value.obj.age += 1));
@@ -60,7 +60,7 @@ ref 和 reactive 对象获取每次修改的快照比较困难，但是 pipel �
 <script>
 import { $, toComp, consoleNode } from "../../core/usePipel/index";
 
-const data$ = $({ nest: { name: "pipel", age: 0 } }).use(
+const data$ = $({ nest: { name: "pipeljs", age: 0 } }).use(
   consoleNode("pipel value"),
 );
 </script>
@@ -76,7 +76,7 @@ const data$ = $({ nest: { name: "pipel", age: 0 } }).use(
 <script setup lang="tsx">
 import { ref, watch } from "vue";
 
-const data = ref({ nest: { name: "pipel", age: 0 } });
+const data = ref({ nest: { name: "pipeljs", age: 0 } });
 watch(
   data,
   (newVal) => {

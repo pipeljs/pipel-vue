@@ -7,10 +7,10 @@ import enConfig from "./config.en.mjs";
 export default defineConfig({
   vite: {
     optimizeDeps: {
-      include: ["pipel"],
+      include: ["pipeljs"],
     },
     ssr: {
-      noExternal: ["pipel"],
+      noExternal: ["pipeljs"],
     },
   },
   title: "pipel-vue",

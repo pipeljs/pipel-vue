@@ -41,9 +41,9 @@ describe("syncRef function", () => {
     await vi.runAllTimersAsync();
     expect(vueRef.value).toBe("world");
 
-    vueRef.value = "pipel";
+    vueRef.value = "pipeljs";
     await vi.runAllTimersAsync();
-    expect(stream$.value).toBe("pipel");
+    expect(stream$.value).toBe("pipeljs");
   });
 
   it("should cleanup when unwatch is called", async () => {

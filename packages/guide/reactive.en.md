@@ -29,7 +29,7 @@ Stream reactive data can be used directly in Vue templates and can be correctly 
 <script setup>
 import { $ } from "pipel-vue";
 
-const name$ = $("pipel");
+const name$ = $("pipeljs");
 
 const updateName = () => {
   name$.set("pipel-vue");
@@ -44,7 +44,7 @@ pipel provides [next](https://pipeljs.github.io/pipel-doc/en/api/stream.html#nex
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 // No need to use spread operator {...value, obj: {...value.obj, age: value.obj.age + 1}}
 stream$.set((value) => (value.obj.age += 1));
@@ -57,7 +57,7 @@ pipel streams can be seamlessly used in Vue's reactive scenarios like watch, com
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 const computed = computed(() => stream$.value.obj.name);
 

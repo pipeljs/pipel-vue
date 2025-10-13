@@ -41,7 +41,7 @@ pipel-vue enhances pipel's Stream and Observable by adding toCompt and render$ m
 **Type**
 
 ```typescript
-declare module "pipel" {
+declare module "pipeljs" {
   interface Stream<T> extends Readonly<Ref<T>> {
     toCompt: () => ComputedRef<T>;
     render$: (

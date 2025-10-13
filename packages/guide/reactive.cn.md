@@ -29,7 +29,7 @@ pipel 提供了强大的响应式功能，让流能够与 Vue 的响应式系统
 <script setup>
 import { $ } from "pipel-vue";
 
-const name$ = $("pipel");
+const name$ = $("pipeljs");
 
 const updateName = () => {
   name$.set("pipel-vue");
@@ -44,7 +44,7 @@ pipel 提供 [next](https://pipeljs.github.io/pipel-doc/cn/api/stream.html#next)
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 // 无需使用扩展符{...value, obj: {...value.obj, age: value.obj.age + 1}j}
 stream$.set((value) => (value.obj.age += 1));
@@ -57,7 +57,7 @@ pipel 流可以无缝地用于 Vue 的 watch、computed 等响应式场景。由
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 const computed = computed(() => stream$.value.obj.name);
 

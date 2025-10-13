@@ -1,4 +1,4 @@
-import { Stream, Observable } from "pipel";
+import { Stream, Observable } from "pipeljs";
 import { cloneDeep } from "lodash-es";
 import {
   ref,
@@ -22,14 +22,14 @@ import {
   watch,
 } from "vue";
 
-export * from "pipel";
+export * from "pipeljs";
 
 const skipKey = "__v_skip";
 const isRefKey = "__v_isRef";
 const isShallowRefKey = "__v_isShallow";
 
 // enhance pipel stream and observable to have ref property
-declare module "pipel" {
+declare module "pipeljs" {
   interface Stream<T> extends Readonly<Ref<T>> {
     toCompt: () => ComputedRef<T>;
     render$: (
@@ -159,7 +159,7 @@ function enhancePipelStream(arg$: Stream | Observable) {
 
   const value = shallowRef<any>(arg$.value);
   // update ref value when observable value changes
-  arg$.afterSetValue((v) => {
+  arg$.afterSetValue((v: any) => {
     value.value = v;
   });
 
@@ -307,7 +307,7 @@ export function syncRef<T>(stream$: Stream<T>, vueRef: Ref<T>): () => void {
   );
 
   // sync stream to ref
-  stream$.then((newVal) => {
+  stream$.then((newVal: T) => {
     if (newVal !== vueRef.value) {
       vueRef.value = newVal;
     }
@@ -521,7 +521,7 @@ export function persistStream$<T>(
   }
 
   // save on change
-  const unsubscribe = stream$.then((value) => {
+  const unsubscribe = stream$.then((value: any) => {
     try {
       storage.setItem(key, JSON.stringify(value));
     } catch (e) {

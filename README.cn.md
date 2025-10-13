@@ -78,7 +78,7 @@ const words = [
   "word",
   "i",
   "am",
-  "pipel",
+  "pipeljs",
   "vue",
   "welcome",
   "everyone",

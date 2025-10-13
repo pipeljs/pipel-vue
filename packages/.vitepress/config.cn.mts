@@ -13,7 +13,7 @@ export default {
         text: "changelog",
         link: "https://github.com/pipeljs/pipel-vue/blob/master/CHANGELOG.md",
       },
-      { text: "pipel", link: "https://pipeljs.github.io/pipel-doc/" },
+      { text: "pipeljs", link: "https://pipeljs.github.io/pipel-doc/" },
     ],
     sidebar: {
       "/cn/": [
@@ -34,7 +34,7 @@ export default {
           text: "API",
           items: [
             {
-              text: "pipel",
+              text: "pipeljs",
               link: "/cn/usePipel/index.html",
             },
             {

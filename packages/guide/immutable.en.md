@@ -11,7 +11,7 @@ pipel uses [limu](https://tnfe.github.io/limu/) immutable data at the bottom lay
 ```typescript
 import { $ } from "pipel-vue";
 
-const stream$ = $({ obj: { name: "pipel", age: 0 } });
+const stream$ = $({ obj: { name: "pipeljs", age: 0 } });
 
 // No need to use spread operator {...value, obj: {...value.obj, age: value.obj.age + 1}}
 stream$.set((value) => (value.obj.age += 1));
@@ -60,7 +60,7 @@ It's difficult to get snapshots of each modification for ref and reactive object
 <script>
 import { $, toComp, consoleNode } from "../../core/usePipel/index";
 
-const data$ = $({ nest: { name: "pipel", age: 0 } }).use(
+const data$ = $({ nest: { name: "pipeljs", age: 0 } }).use(
   consoleNode("pipel value"),
 );
 </script>
@@ -76,7 +76,7 @@ const data$ = $({ nest: { name: "pipel", age: 0 } }).use(
 <script setup lang="tsx">
 import { ref, watch } from "vue";
 
-const data = ref({ nest: { name: "pipel", age: 0 } });
+const data = ref({ nest: { name: "pipeljs", age: 0 } });
 watch(
   data,
   (newVal) => {

@@ -39,7 +39,7 @@ Async request methods wrapped with useFetch, using streams as input and output, 
 
 ```ts
 const url$ = $("https://api.example.com/data");
-const payload$ = $({ id: 1, name: "pipel" });
+const payload$ = $({ id: 1, name: "pipeljs" });
 const { promise$ } = useFetch(url$, { immediate: false, refetch: true })
   .get(payload$)
   .json();

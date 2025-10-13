@@ -125,15 +125,15 @@ Frontend business models based on streams perfectly match the **highly asynchron
 pipel saves the data processed by logic for each stream node, allowing stream nodes to carry both logic and data, as shown below:
 
 ```typescript
-import { $ } from "pipel";
+import { $ } from "pipeljs";
 
-const userInfo$ = $({ name: "pipel", age: 18, role: "admin" });
+const userInfo$ = $({ name: "pipeljs", age: 18, role: "admin" });
 
 const isAdult$ = userInfo$.thenImmediate((value) => value.age >= 18);
 
 const isAdmin$ = userInfo$.thenImmediate((value) => value.role === "admin");
 
-userInfo$.value; // { name: "pipel", age: 18, role: "admin" }
+userInfo$.value; // { name: "pipeljs", age: 18, role: "admin" }
 isAdult$.value; // true
 isAdmin$.value; // true
 
@@ -142,7 +142,7 @@ userInfo$.set((value) => {
   value.role = "user";
 });
 
-userInfo$.value; // { name: "pipel", age: 17, role: "user" }
+userInfo$.value; // { name: "pipeljs", age: 17, role: "user" }
 isAdult$.value; // false
 isAdmin$.value; // false
 ```

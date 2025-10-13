@@ -41,7 +41,7 @@ pipel-vue 对 pipel 的 Stream 和 Observable 进行了增强，增加了 toComp
 **类型**
 
 ```typescript
-declare module "pipel" {
+declare module "pipeljs" {
   interface Stream<T> extends Readonly<Ref<T>> {
     toCompt: () => ComputedRef<T>;
     render$: (

@@ -125,15 +125,15 @@ MVVM 框架的最大优势在于：当 Model 发生变化时，View 会自动更
 pipel 为每个流节点保存了逻辑处理后的数据，让流节点既可以承载逻辑也可以承载数据，如下所示：
 
 ```typescript
-import { $ } from "pipel";
+import { $ } from "pipeljs";
 
-const userInfo$ = $({ name: "pipel", age: 18, role: "admin" });
+const userInfo$ = $({ name: "pipeljs", age: 18, role: "admin" });
 
 const isAdult$ = userInfo$.thenImmediate((value) => value.age >= 18);
 
 const isAdmin$ = userInfo$.thenImmediate((value) => value.role === "admin");
 
-userInfo$.value; // { name: "pipel", age: 18, role: "admin" }
+userInfo$.value; // { name: "pipeljs", age: 18, role: "admin" }
 isAdult$.value; // true
 isAdmin$.value; // true
 
@@ -142,7 +142,7 @@ userInfo$.set((value) => {
   value.role = "user";
 });
 
-userInfo$.value; // { name: "pipel", age: 17, role: "user" }
+userInfo$.value; // { name: "pipeljs", age: 17, role: "user" }
 isAdult$.value; // false
 isAdmin$.value; // false
 ```

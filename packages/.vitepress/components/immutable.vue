@@ -28,7 +28,7 @@ defineOptions({
   name: "immutable",
 });
 
-const data = ref({ nest: { name: "pipel", age: 0 } });
+const data = ref({ nest: { name: "pipeljs", age: 0 } });
 
 watch(
   data,
@@ -38,7 +38,7 @@ watch(
   { deep: true },
 );
 
-const data$ = $({ nest: { name: "pipel", age: 0 } }).use(
+const data$ = $({ nest: { name: "pipeljs", age: 0 } }).use(
   consoleNode("pipel value"),
 );
 

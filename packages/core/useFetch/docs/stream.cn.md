@@ -39,7 +39,7 @@ execute(); // 触发请求，promise$ 会推送结果
 
 ```ts
 const url$ = $("https://api.example.com/data");
-const payload$ = $({ id: 1, name: "pipel" });
+const payload$ = $({ id: 1, name: "pipeljs" });
 const { promise$ } = useFetch(url$, { immediate: false, refetch: true })
   .get(payload$)
   .json();
