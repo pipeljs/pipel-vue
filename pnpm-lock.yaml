@@ -11,9 +11,9 @@ importers:
       '@vueuse/shared':
         specifier: ^11.1.0
         version: 11.3.0(vue@3.5.18(typescript@5.9.2))
-      pipel:
-        specifier: ^0.3.34
-        version: 0.3.34
+      pipeljs:
+        specifier: ^0.3.35
+        version: 0.3.35
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
@@ -1814,7 +1814,7 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  pipel@0.3.34:
+  pipeljs@0.3.35:
     resolution: {integrity: sha512-Bfar+vlqtsZinjTxS2gWbiHfTxCDZWd+VKkK77YsqWbQQdD/rA7PP8ZjOZ5OFguh1q9hMyCRZKXik9sLE2iHHA==}
 
   focus-trap@7.6.5:
@@ -5226,7 +5226,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  pipel@0.3.34:
+  pipeljs@0.3.35:
     dependencies:
       limu: 3.13.2
 

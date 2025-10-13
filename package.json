@@ -35,7 +35,6 @@
     "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.mjs.json",
     "prepare": "husky",
     "lint": "eslint --cache --fix",
-    "prepublishOnly": "npm run build",
     "publish": "npm run build && npm publish",
     "publish:beta": "npm run build && npm publish --tag beta",
     "release": "standard-version",
@@ -51,7 +50,7 @@
   },
   "dependencies": {
     "@vueuse/shared": "^11.1.0",
-    "pipeljs": "^0.3.34",
+    "pipeljs": "^0.3.35",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
