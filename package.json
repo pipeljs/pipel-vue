@@ -51,7 +51,7 @@
   "dependencies": {
     "@vueuse/shared": "^11.1.0",
     "lodash-es": "^4.17.21",
-    "pipeljs": "^0.3.36"
+    "pipeljs": "^0.3.37"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

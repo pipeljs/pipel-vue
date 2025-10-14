@@ -15,8 +15,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       pipeljs:
-        specifier: ^0.3.36
-        version: 0.3.36
+        specifier: ^0.3.37
+        version: 0.3.37
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
@@ -2616,8 +2616,8 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
 
-  pipeljs@0.3.36:
-    resolution: {integrity: sha512-uHUTeZHwghYp2NTz+jJoMtzFDWrEU7SO+wPu5KmT2lTK6Wjt7DOopOlbVYli8LUBXU9RFsC9JM+VIhDku6yoeQ==}
+  pipeljs@0.3.37:
+    resolution: {integrity: sha512-sdWOFVC7XO4t2Eau8kXMo7qji68R0f8XkI5hgsXs/4kCyO0dGLKfOotrrF938QeMTARAEaTFIN0NIT/abWQkFQ==}
 
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
@@ -6018,7 +6018,7 @@ snapshots:
 
   pify@3.0.0: {}
 
-  pipeljs@0.3.36:
+  pipeljs@0.3.37:
     dependencies:
       limu: 3.13.2
 
