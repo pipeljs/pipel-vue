@@ -35,8 +35,6 @@
     "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.mjs.json",
     "prepare": "husky",
     "lint": "eslint --cache --fix",
-    "publish": "npm run build && npm publish",
-    "publish:beta": "npm run build && npm publish --tag beta",
     "release": "standard-version",
     "release-major": "standard-version --release-as major",
     "release-minor": "standard-version --release-as minor",
