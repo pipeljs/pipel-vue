@@ -50,8 +50,8 @@
   },
   "dependencies": {
     "@vueuse/shared": "^11.1.0",
-    "pipeljs": "^0.3.35",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "pipeljs": "^0.3.40"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

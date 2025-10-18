@@ -11,12 +11,12 @@ importers:
       '@vueuse/shared':
         specifier: ^11.1.0
         version: 11.3.0(vue@3.5.18(typescript@5.9.2))
-      pipeljs:
-        specifier: ^0.3.35
-        version: 0.3.35
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
+      pipeljs:
+        specifier: ^0.3.40
+        version: 0.3.40
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
@@ -1814,9 +1814,6 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  pipeljs@0.3.35:
-    resolution: {integrity: sha512-Bfar+vlqtsZinjTxS2gWbiHfTxCDZWd+VKkK77YsqWbQQdD/rA7PP8ZjOZ5OFguh1q9hMyCRZKXik9sLE2iHHA==}
-
   focus-trap@7.6.5:
     resolution: {integrity: sha512-7Ke1jyybbbPZyZXFxEftUtxFGLMpE2n6A+z//m4CRDlj0hW+o3iYSmh8nFlYMurOiJVDmJRilUQtJr08KfIxlg==}
 
@@ -2210,7 +2207,6 @@ packages:
 
   limu@3.13.2:
     resolution: {integrity: sha512-wTN7gklCjfVUDyFh8Rj3n03D7RzXb3CXfgljR0kX2D+YADcbruv6+rxCzXz0mK1D3XHTIyQpin5xM1xIg0xsUg==}
-    bundledDependencies: []
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -2619,6 +2615,9 @@ packages:
   pify@3.0.0:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
+
+  pipeljs@0.3.40:
+    resolution: {integrity: sha512-f4eF266iErgDkoKAd+PPnQkDabd9Dqiuc8+Cm0cD47Dc9BfKY06jE627tS1pJDQVEQvjVTGD+H0nwZ/JovQUUw==}
 
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
@@ -5226,10 +5225,6 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  pipeljs@0.3.35:
-    dependencies:
-      limu: 3.13.2
-
   focus-trap@7.6.5:
     dependencies:
       tabbable: 6.2.0
@@ -6022,6 +6017,10 @@ snapshots:
   pify@2.3.0: {}
 
   pify@3.0.0: {}
+
+  pipeljs@0.3.40:
+    dependencies:
+      limu: 3.13.2
 
   postcss@8.5.6:
     dependencies:
