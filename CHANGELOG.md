@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.36](https://github.com/pipeljs/pipel-vue/compare/v0.2.35...v0.2.36) (2025-10-14)
+
+### [0.2.35](https://github.com/pipeljs/pipel-vue/compare/v0.2.34...v0.2.35) (2025-10-14)
+
+### 0.2.34 (2025-10-14)
+
+
+### Features
+
+* init project ([6a1448b](https://github.com/pipeljs/pipel-vue/commit/6a1448b5d13d829727d48373123c772ddd41935f))
+
 ### [0.2.33](https://github.com/pipeljs/pipel-vue/compare/v0.2.32...v0.2.33) (2025-08-21)
 
 

@@ -203,7 +203,7 @@ import {
   fromEvent,
   computedStream$,
 } from 'pipel-vue'
-import { debounce } from 'pipel'
+import { debounce } from 'pipeljs'
 
 const searchStream$ = $('')
 const searchInput = ref('')

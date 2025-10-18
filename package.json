@@ -1,6 +1,6 @@
 {
   "name": "pipel-vue",
-  "version": "0.2.33",
+  "version": "0.2.36",
   "description": "Pipel-based Streaming Programming Library for Vue",
   "author": "GolderBrother <https://github.com/GolderBrother>",
   "repository": "https://github.com/pipeljs/pipel-vue",
@@ -35,14 +35,15 @@
     "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.mjs.json",
     "prepare": "husky",
     "lint": "eslint --cache --fix",
-    "publish": "npm run build && npm publish",
-    "publish:beta": "npm run build && npm publish --tag beta",
     "release": "standard-version",
     "release-major": "standard-version --release-as major",
     "release-minor": "standard-version --release-as minor",
     "release-patch": "standard-version --release-as patch",
     "release-and-publish": "npm run release && npm run publish",
-    "release-and-publish:beta": "npm run release && npm run publish:beta"
+    "release-and-publish:beta": "npm run release && npm run publish:beta",
+    "release-and-publish:major": "npm run release-major && npm run build && npm publish",
+    "release-and-publish:minor": "npm run release-minor && npm run build && npm publish",
+    "release-and-publish:patch": "npm run release-patch && npm run build && npm publish"
   },
   "license": "MIT",
   "peerDependencies": {

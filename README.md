@@ -1,24 +1,24 @@
-# flowline-vue
+# pipel-vue
 
 <div align="center">
-  <img src="./packages/public/logo.svg" alt="flowline-vue logo" width="120" height="120">
+  <img src="./packages/public/logo.svg" alt="pipel-vue logo" width="120" height="120">
   <p style="margin-top: 20px;">Flowline-based Streaming Programming Library for Vue</p>
 </div>
 
 <div align="center">
 
-[![codecov](https://img.shields.io/codecov/c/github/flowlinejs/flowline-vue?style=flat)](https://codecov.io/gh/flowlinejs/flowline-vue)
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/flowlinejs/flowline-vue/blob/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/flowline-vue.svg?style=flat)](https://www.npmjs.com/package/flowline-vue)
-[![npm downloads](https://img.shields.io/npm/dm/flowline-vue.svg?style=flat)](https://www.npmjs.com/package/flowline-vue)
-[![GitHub stars](https://img.shields.io/github/stars/flowlinejs/flowline-vue?style=flat)](https://github.com/flowlinejs/flowline-vue/stargazers)
+[![codecov](https://img.shields.io/codecov/c/github/flowlinejs/pipel-vue?style=flat)](https://codecov.io/gh/flowlinejs/pipel-vue)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/flowlinejs/pipel-vue/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pipel-vue.svg?style=flat)](https://www.npmjs.com/package/pipel-vue)
+[![npm downloads](https://img.shields.io/npm/dm/pipel-vue.svg?style=flat)](https://www.npmjs.com/package/pipel-vue)
+[![GitHub stars](https://img.shields.io/github/stars/flowlinejs/pipel-vue?style=flat)](https://github.com/flowlinejs/pipel-vue/stargazers)
 [![Vue](https://img.shields.io/badge/Vue-3.2.0+-4FC08D?style=flat&logo=vue.js)](https://vuejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/flowlinejs/flowline-vue)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/flowlinejs/pipel-vue)
 
 <div align="center">
 
-[official website](https://flowlinejs.github.io/flowline-vue/en/)
+[official website](https://flowlinejs.github.io/pipel-vue/en/)
 
 </div>
 
@@ -28,7 +28,7 @@
 
 ## 🎯 Introduction
 
-flowline-vue is a streaming programming library based on [flowline](https://github.com/flowlinejs/flowline). It provides a series of practical stream methods and composable functions, deeply integrating the streaming programming paradigm with Vue's reactive system, fully enjoying the smooth development experience brought by streaming programming.
+pipel-vue is a streaming programming library based on [flowline](https://github.com/flowlinejs/flowline). It provides a series of practical stream methods and composable functions, deeply integrating the streaming programming paradigm with Vue's reactive system, fully enjoying the smooth development experience brought by streaming programming.
 
 ## 🚀 Features
 
@@ -52,11 +52,11 @@ flowline-vue is a streaming programming library based on [flowline](https://gith
 ## 🛠️ Installation
 
 ```bash
-npm install flowline-vue
+npm install pipel-vue
 # or
-yarn add flowline-vue
+yarn add pipel-vue
 # or
-pnpm add flowline-vue
+pnpm add pipel-vue
 ```
 
 ## 🎥 Usage Example
@@ -72,7 +72,7 @@ pnpm add flowline-vue
 </template>
 
 <script setup lang="ts">
-import { $, debounce, filter, map } from "flowline-vue";
+import { $, debounce, filter, map } from "pipel-vue";
 
 const words = [
   "word",
@@ -88,7 +88,7 @@ const words = [
   "experience",
   "the",
   "amazing",
-  "flowline-vue",
+  "pipel-vue",
   "library",
   "for",
   "reactive",

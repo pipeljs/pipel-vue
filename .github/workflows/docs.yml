@@ -38,6 +38,9 @@ jobs:
         run: pnpm i && pnpm run docs:build
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.PAGES_PAT }}  # 引用自定义 PAT 的 Secrets
+          enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
