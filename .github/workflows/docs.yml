@@ -11,9 +11,9 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read        # 只读仓库内容（正确）
+  pages: write          # 写入 Pages 资源（正确）
+  id-token: write       # 生成身份令牌（用于 Pages 部署，正确）
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -39,7 +39,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-        #   token: ${{ secrets.PAGES_PAT }}  # 引用自定义 PAT 的 Secrets
+          token: ${{ secrets.PAGES_PAT }}  # 引用自定义 PAT 的 Secrets
           enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
